@@ -1,0 +1,599 @@
+/* styles.css */
+
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+  font-family: "Noto Sans TC", "Helvetica", "cwTeXYen", sans-serif, Arial, sans-serif;
+  line-height: 2;
+  font-weight: 400;
+  color: #24201e;
+  background-color: #ebe5ee;
+  /* 原為 dfd8e0 */
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  background-color: #3b3951;
+}
+.dark main p {
+  color: #cecfe2;
+}
+
+body.yellow {
+  background-color: #ddd4cd;
+  /* dfd8cd dfd6ca*/
+}
+
+body.gray {
+  background-color: #cbced6;
+  /* bdbdbf e4dace dfdcd8*/
+}
+
+header {
+  height: 100vh;
+  background-color: #ebe5ee;
+  /* 原為 dfd8e0 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  /* align-items: center; */
+  /* 97929a89 */
+  background: 
+    linear-gradient(112deg, #ebe5ee 65%, #5d5b5e 60%,#5d5b5e47 72%, transparent 80%) center center / 100% 100%,
+    url("./img/company.png") right center / auto 100%;
+
+}
+
+footer {
+  background-color: #b9b3b9;
+}
+
+/* section {
+  min-height: 95vh;
+} */
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  /* 524a46 */
+  cursor: pointer;
+}
+a:hover {
+  color: #e2ded9;
+}
+
+.index-box a:hover {
+  color: #c4ac92;
+}
+
+
+nav {
+  background-color: #bcb8cfee;
+  padding: 0px 10px;
+}
+
+/* nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  margin-right: 10px;
+} */
+
+.highlight {
+  /* background: linear-gradient(180deg, transparent 50%, #bcb8cfd8 0); */
+  /* background: linear-gradient(270deg, transparent 70%, #bcb8cf 0); */
+  background-image: url("./img/grid.png");
+  /* background-position: left center; */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  max-width: 95%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #524a46;
+  cursor: pointer;
+  /* line-height: 32px; */
+  vertical-align: baseline;
+}
+.nav-link.active {
+  color: #24201e; /* 深色 */
+  font-weight: bold; /* 使文字變得更加醒目 */
+}
+
+.work-environment {
+  padding: 20px;
+  margin: 7px;
+  /* background-color: #d6d1d6; */
+}
+
+.detailed-work-content {
+  padding: 20px;
+  margin: 7px;
+}
+
+.company-detail-box {
+  /* background-color: #fff; */
+  padding: 20px;
+  /* margin: 7px; */
+  border-radius: 8px;
+  height: 100%;
+}
+
+.company-box {
+  border-radius: 8px;
+}
+
+.image-box img {
+  border-radius: 8px;
+}
+
+/* 待修正 */
+.custom-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-left: dashed gray 2px;
+}
+
+.department-detail-box {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  /* 使detail-box填滿其父元素的高度 */
+}
+
+.department-detail-box h4,
+p {
+  color: #1f1413;
+}
+
+.row {
+  display: flex;
+  /* justify-content: center; */
+  align-items: stretch; /* 使所有子元素高度一致 */
+}
+
+
+
+.content-index {
+  display: flex;
+  justify-content:center;
+  /* width: 100vw; */
+  background-image: url("./img/index_bg.svg");
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-size: 100% 100%;
+}
+
+.index-center {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.index-box {
+  display: flex;
+  align-items:center;
+  /* justify-content:center; */
+  margin: 50px 20px;
+  /* background-color: #cbced6; */
+}
+
+@media screen and (max-width: 575px) {
+  .index-box {
+    margin: 50px 10px;
+  }
+  .index-center {
+    padding: 0;
+  }
+}
+
+.index-box:nth-child(even) {
+  /* justify-content: flex-end;  */
+  margin-left: 20vw;
+}
+
+.index-text {
+  padding: 0px 20px;
+  margin-left: 10px;
+  /* margin-right: 10%; */
+  /* background-color: #cbced6;
+  border-radius: 8px;
+  height: 100%; */
+}
+
+/* 圓形變形 */
+.index-title {
+  /* height: 400px;
+  width: 400px; */
+  /* background: linear-gradient(135deg, #ffe400 22%, #00ac97 72%); */
+  background-color: #bcb8cfee;
+  border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+  /* border-radius: 68% 55% 80% 50% / 68% 60% 70% 55%; */
+  /* border-radius: 100%; */
+  /* animation: change-radius 10s ease-in-out infinite alternate; */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* 時間改為 0.5 秒 */
+}
+
+.index-title:hover {
+  transform: translateY(-10px); /* 向上移動10px */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #b5895b;
+  /* c4ac92 */
+}
+
+/* @keyframes change-radius {
+  0%, 100% {
+    border-radius: 68% 55% 80% 50% / 68% 60% 70% 55%;
+  }
+  20% {
+    border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%;
+  }
+  40% {
+    border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%;
+  }
+  60% {
+    border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+  }
+} */
+
+
+
+/* 工作內容 */
+/* 工作內容 */
+/* 工作內容 */
+
+/* 自定義清單 */
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: custom-counter; /* 初始化計數器 */
+  position: relative; /* 設置相對定位 */
+}
+
+.custom-list::before {
+  content: "";
+  position: absolute; /* 設置絕對定位 */
+  top: 0;
+  left: 13px; /* 線的位置，根據需要調整 */
+  width: 4px; /* 線的寬度 */
+  height: 100%; /* 線的高度 */
+  background-color: #756363;
+  /* 6b6b80 */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 40px;
+  counter-increment: custom-counter; /* 計數器遞增 */
+  margin-bottom: 40px; /* 增加間距以顯示貫穿線 */
+}
+
+.custom-list li::before {
+  content: counter(custom-counter); /* 插入計數器的值 */
+  position: absolute; /* 絕對定位 */
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #756363;
+  /* 6b6b80 */
+  color: #e9e8eb;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex; /* 使用flexbox對齊內容 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+.job-progress {
+  background-color: #cdbfa9;
+  /* d6d1d6 d0c4b1*/
+  width: fit-content;
+}
+
+.job-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  /* background-color: #d6d1d6; */
+}
+.job-title {
+  /* background-color: #d6d1d6; */
+  width: 100%;
+  /* text-align: center; */
+  /* border-bottom: solid #d6d1d6 2px; */
+}
+
+.job-text {
+  width: 100%;
+}
+
+.job-big-title {
+  border-radius: 8px;
+  background-color: #d5cbbb;
+  /* d6d1d6 d4b585*/
+}
+
+.job-img {
+  max-width: 60%;
+}
+
+.job-img.small-img {
+  max-width: 30%;
+}
+
+@media screen and (max-width: 991px) {
+  .job-img {
+    max-width: 80%;
+  }
+  .job-img.small-img {
+    max-width: 40%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .job-img {
+    max-width: 100%;
+  }
+  .job-img.small-img {
+    max-width: 50%;
+  }
+}
+
+
+/* 圖片切換 */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  height: 0;
+}
+
+.image-container.image-main-page {
+  padding-bottom: 75.41%;
+}
+
+.image-container.image-select {
+  padding-bottom: 64.91%;
+  /* padding-bottom: 37.7%;
+  width: 50%; */
+}
+
+.image-container.image-table {
+  /* padding-bottom: 56.25%; */
+  padding-bottom: 47.65%;
+}
+/* 
+.image-container.image-machine-data {
+  padding-bottom: 75.41%;
+}
+
+.image-container.image-material-data {
+  padding-bottom: 75.41%;
+} */
+
+.main-image,
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-fit: contain; /* 確保圖片完整顯示 */
+  background-color: #ddd4cd; /* 可選：為空白區域設置背景色 ebe5ee*/
+  transition: opacity 0.7s ease 0.2s;
+}
+
+.hover-image {
+  opacity: 0;
+}
+
+.image-container:hover .hover-image {
+  opacity: 1; /* 顯示 hover 圖片 */
+}
+
+.image-container:hover .main-image {
+  opacity: 0; /* 隱藏原始圖片 */
+}
+
+/* 學習 */
+/* 學習 */
+/* 學習 */
+
+/* .learn-title {
+  background-color: #d1d6d3
+  b9b3b9 d6d1d6
+} */
+
+.skill-title {
+  white-space: nowrap;
+  /* word-break: break-all; */
+  /* border-left: solid #b9b3b9 1px;
+  border-right: solid #b9b3b9 1px; */
+}
+
+/* @media screen and (max-width: 1439px) {
+  .in_container {
+    width: 75%;
+  }
+} */
+
+.skill-col {
+  height: 100%;
+  /* min-width: 300px; */
+}
+
+.skill {
+  background-color: #769cb9;
+  /* d1d2d6 5580a0*/
+  /* color: #e7e1da; */
+}
+/* .skill p {
+  color: #e7e1da;
+} */
+
+.non-skill {
+  background-color: #d39962;
+  /* d6d1d1 dfd8cd cc8a4d*/
+}
+
+.skill-box {
+  /* background-color: #d1d2d6; */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box-title {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.skill-box-text {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* padding: 10px; */
+  /* height: auto; */
+}
+
+
+/* 心得 */
+/* 心得 */
+/* 心得 */
+.experience {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px 0;
+  /* align-items: center; */
+  border-radius: 8px;
+  /* margin-left: 15%; */
+  /* align-items: center; */
+}
+
+.experience-title {
+  background-color: #cecfe2;
+  /* d6d1d6 cecfe2 */
+  border-radius: 8px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#experience .experience-title {
+  background-image: url("./img/11.png");
+}
+
+#suggestion .experience-title {
+  background-image: url("./img/1.png");
+}
+
+/* to the top */
+/* to the top */
+/* to the top */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #bcb8cf;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* 確保按鈕顯示在其他內容上方 */
+}
+
+.scroll-to-top img {
+  width: 70%;
+  height: auto;
+}
+
+.scroll-to-top:hover {
+  background-color: #6b6b80;
+}
+
+/* 動畫 */
+/* 動畫 */
+/* 動畫 */
+.from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.from-bottom.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.from-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.from-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.from-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.from-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.from-center {
+  opacity: 0;
+  transition: opacity 1.5s linear;
+}
+.from-center.show {
+  opacity: 1;
+}
