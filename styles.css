@@ -380,6 +380,11 @@ p {
   width: 100%;
   height: 100%;
   height: 0;
+  -webkit-touch-callout: none; /* 禁用 iOS 的圖片上下文菜單 */
+  -webkit-user-select: none;  /* 禁止選中文字 */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .image-container.image-main-page {
