@@ -132,6 +132,17 @@ nav li {
   margin: 7px;
 }
 
+@media screen and (max-width: 575px) {
+  .work-environment {
+    padding: 20px 0px;
+    margin: 7px 0px;
+  }
+  .detailed-work-content {
+    padding: 20px 0px;
+    margin: 7px 0px;
+  }
+}
+
 .company-detail-box {
   /* background-color: #fff; */
   padding: 20px;
@@ -185,6 +196,7 @@ p {
   background-image: url("./img/index_bg.svg");
   background-repeat: no-repeat;
   /* background-size: contain; */
+  height: fit-content;
   background-size: 100% 100%;
 }
 
@@ -204,7 +216,7 @@ p {
 
 @media screen and (max-width: 575px) {
   .index-box {
-    margin: 50px 10px;
+    margin: 50px 0px;
   }
   .index-center {
     padding: 0;
@@ -355,10 +367,10 @@ p {
 
 @media screen and (max-width: 991px) {
   .job-img {
-    max-width: 80%;
+    max-width: 90%;
   }
   .job-img.small-img {
-    max-width: 40%;
+    max-width: 50%;
   }
 }
 
@@ -368,7 +380,7 @@ p {
     max-width: 100%;
   }
   .job-img.small-img {
-    max-width: 50%;
+    max-width: 60%;
   }
 }
 
