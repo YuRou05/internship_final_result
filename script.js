@@ -59,30 +59,58 @@ document.addEventListener("DOMContentLoaded", function () {
 // 圖片
 // 圖片
 
+// const imageLinks = document.querySelectorAll(".image-container");
+
+// imageLinks.forEach((link) => {
+//   // 監聽觸控事件，切換圖片
+//   link.addEventListener("touchstart", () => {
+//     const hoverImage = link.querySelector(".hover-image");
+//     const mainImage = link.querySelector(".main-image");
+//     if (hoverImage && mainImage) {
+//       hoverImage.style.opacity = "1";
+//       mainImage.style.opacity = "0";
+//     }
+//   });
+
+//   // 監聽觸控結束後恢復原狀
+//   link.addEventListener("touchend", () => {
+//     const hoverImage = link.querySelector(".hover-image");
+//     const mainImage = link.querySelector(".main-image");
+//     if (hoverImage && mainImage) {
+//       hoverImage.style.opacity = "0";
+//       mainImage.style.opacity = "1";
+//     }
+//   });
+// });
+
 const imageLinks = document.querySelectorAll(".image-container");
 
-imageLinks.forEach((link) => {
-  // 監聽觸控事件，切換圖片
-  link.addEventListener("touchstart", () => {
-    const hoverImage = link.querySelector(".hover-image");
-    const mainImage = link.querySelector(".main-image");
-    if (hoverImage && mainImage) {
-      hoverImage.style.opacity = "1";
-      mainImage.style.opacity = "0";
-    }
-  });
+    // 禁用長按圖片相關功能
+    imageLinks.forEach((link) => {
+      // link.addEventListener("contextmenu", (e) => e.preventDefault()); // 禁用右鍵菜單
+      // link.addEventListener("dragstart", (e) => e.preventDefault());  // 禁用拖拽
 
-  // 監聽觸控結束後恢復原狀
-  link.addEventListener("touchend", () => {
-    const hoverImage = link.querySelector(".hover-image");
-    const mainImage = link.querySelector(".main-image");
-    if (hoverImage && mainImage) {
-      hoverImage.style.opacity = "0";
-      mainImage.style.opacity = "1";
-    }
-  });
-});
+      // 監聽觸控事件，切換圖片
+      link.addEventListener("touchstart", (e) => {
+        e.preventDefault(); // 防止默認行為，例如選中圖片
+        const hoverImage = link.querySelector(".hover-image");
+        const mainImage = link.querySelector(".main-image");
+        if (hoverImage && mainImage) {
+          hoverImage.style.opacity = "1";
+          mainImage.style.opacity = "0";
+        }
+      }, { passive: false }); // 使用 passive: false 確保能 preventDefault
 
+      // 監聽觸控結束後恢復原狀
+      link.addEventListener("touchend", (e) => {
+        const hoverImage = link.querySelector(".hover-image");
+        const mainImage = link.querySelector(".main-image");
+        if (hoverImage && mainImage) {
+          hoverImage.style.opacity = "0";
+          mainImage.style.opacity = "1";
+        }
+      });
+    });
 
 
 // to the top
